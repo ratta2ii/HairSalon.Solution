@@ -1,0 +1,23 @@
+@{
+  Layout = "_Layout";
+}
+
+<h1>You are in Views/Clients/Create.cshtml</h1>?
+
+@model HairSalon.Models.Client
+
+<h4>Add a new Client</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.Name)
+  @Html.TextBoxFor(model => model.Name)
+
+  @Html.LabelFor(model => model.Stylist)
+  @Html.DropDownList("StylistId")
+
+  <input type="submit" value="Add Client" class="btn btn-default" />
+}
+
+// Update the correct links in this page. Perhaps a go back
+

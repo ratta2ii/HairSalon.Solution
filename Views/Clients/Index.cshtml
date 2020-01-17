@@ -2,8 +2,28 @@
   Layout = "_Layout";
 }
 
-<center>
-  <h1>I am the Views/Clients/Index.cshtml</h1>
-  <h3>Congratulations</h3>
-  <p>@Html.ActionLink("Back to Homepage", "Index", "Home")</p>
-</center>
+@using HairSalon.Models;
+@model List<HairSalon.Models.Client>;
+
+<h4>I am the Views/Clients/Index.cshtml</h4>
+<h1>Clients</h1>1
+
+@if (@Model.Count == 0)
+{
+  <h3>There are currently no Clients</h3>
+}
+
+<ol>
+
+  @foreach (Client client in @Model)
+  {
+    <li>@Html.ActionLink($"{client.Name}", "Details", new { id = client.CliendId}) | @client.Stylist.Name</li>
+  }
+
+</ol>
+
+<p>@Html.ActionLink("Add new Client", "Create")</p>
+<p>@Html.ActionLink("Add new Stylist", "Create", "Stylists")</p>
+<p>@Html.ActionLink("Back to Homepage", "Index", "Home")</p>
+
+// Update the list elements and what they display
