@@ -5,22 +5,9 @@ namespace HairSalon.Controllers
   public class HomeController : Controller
   {
     [HttpGet("/")]
-    public ActionResult Index()   // This could also be IActionResult
+    public ActionResult Index()
     {
       return View();
     }
-    
-    // public IActionResult About()
-    // {
-    //   return View();
-    // }
-    // public IActionResult Contact()
-    // {
-    //   return View();
-    // }
-    // public IActionResult Error()
-    // {
-    //   return View();
-    // }
   }
 }

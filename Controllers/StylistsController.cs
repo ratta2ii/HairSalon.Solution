@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using HairSalon.Models;
 
-namespace HairSalon.Controllers 
+namespace HairSalon.Controllers
 {
   public class StylistsController : Controller
   {
@@ -13,6 +13,7 @@ namespace HairSalon.Controllers
     {
       _db = db;
     }
+    
     public ActionResult Index()
     {
       List<Stylist> model = _db.Stylists.ToList();
@@ -67,6 +68,6 @@ namespace HairSalon.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
-    
+
   }
 }

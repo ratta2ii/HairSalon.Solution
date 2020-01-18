@@ -11,22 +11,17 @@
 
 <h4>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h4>
 
-@* 
-This is where you will write a loop to display all 
-of the clients for this particular Stylist. *@
-
+@* A list of all clients for a specific user *@
 @if (@Model.Clients.Count == 0)
 {
   <h3>You currently have no clients</h3>
 }
-
 <ol>
   @foreach (Client client in @Model.Clients)
   {
     <li>@client.Name</li>
   }
 </ol>
-
 
 
 <p>@Html.ActionLink("Add a new Client", "Create", "Clients")</p>
