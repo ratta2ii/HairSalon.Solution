@@ -18,7 +18,29 @@ _This is a server side application built in C# using ASP.Net Core MVC. This proj
 
 #
    
+### **SQL Statements (Database)**
+
+##### Statement 1
+#
+CREATE TABLE `stylists` (
+  `StylistId` int(11) NOT NULL AUTO_INCREMENT,
+  `Name` varchar(255) DEFAULT NULL,
+  `Specialty` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`StylistId`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+#
+
+##### Statement 2
+#
+CREATE TABLE `clients` (
+  `ClientId` int(11) NOT NULL AUTO_INCREMENT,
+  `Name` varchar(255) DEFAULT NULL,
+  `StylistId` int(11) DEFAULT '0',
+  PRIMARY KEY (`ClientId`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+#
 ### **Technologies Used**
+
 
 * C#
 * netcoreapp2.2
