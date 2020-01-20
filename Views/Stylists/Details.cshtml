@@ -4,27 +4,36 @@
 @using HairSalon.Models;
 @model HairSalon.Models.Stylist
 
-<h1>You are in the Views/Stylists/Details.cshtml</h1>
+<h1>Stylist @Html.DisplayFor(model => model.Name)</h1>
 
-<h4>Stylist Details</h4>
-<hr/>
-
-<h4>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h4>
-
-@* A list of all clients for a specific user *@
 @if (@Model.Clients.Count == 0)
 {
-  <h3>You currently have no clients</h3>
+  <h3>There are no clients at this time</h3>
 }
-<ol>
-  @foreach (Client client in @Model.Clients)
-  {
-    <li>@client.Name</li>
-  }
-</ol>
 
+<table class="redTable">
+  <thead>
+    <tr>
+      <th>Client List</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td colspan="3">
+        <div class="links"><a href="#">&laquo;</a> <a class="active" href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">&raquo;</a></div>
+      </td>
+    </tr>
+  </tfoot>
+  <tbody>
+    @foreach (Client client in @Model.Clients)
+    {
+      <tr>
+        <td>@client.Name</td>
+      </tr>
+    }  
+  </tbody>
+</table>  
 
 <p>@Html.ActionLink("Add a new Client", "Create", "Clients")</p>
 <p>@Html.ActionLink("Back to Stylists", "Index")</p>
-<p>@Html.ActionLink("Edit Stylist Details", "Edit", new { id = Model.StylistId})</p>
 <p>@Html.ActionLink("Delete Stylist", "Delete", new { id = Model.StylistId })</p>

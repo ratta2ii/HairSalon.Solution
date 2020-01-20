@@ -3,14 +3,21 @@
 }
 @model HairSalon.Models.Stylist
 
-<h4>You are currently in Views/Stylists/Create.cshtml</h4>
-<h4>Add a new Stylist</h4>
+<h1>Add Stylist</h1>
 
-@using (Html.BeginForm())
-{
-  @Html.LabelFor(model => model.Name)
-  @Html.TextBoxFor(model => model.Name)
-  <input type="submit" value="Add new Stylist" />
-}
+<div class="form-container card">
 
-<p>@Html.ActionLink("Show all Stylist", "Index")</p>
+  @using (Html.BeginForm())
+  {
+    <h4 class="form-label">Enter Name:</h4>
+    <h4 class="input-field">@Html.TextBoxFor(model => model.Name)</h4>
+
+    <h4 class="form-label">Enter Specialty:</h4>
+    <h4 class="input-field">@Html.TextBoxFor(model => model.Specialty)</h4>
+
+    <input class="btn btn-info submit-button" type="submit" value="Add Stylist" />
+  }
+
+</div>
+
+<p>@Html.ActionLink("Back to Stylist", "Index")</p>

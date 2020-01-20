@@ -3,14 +3,16 @@
 }
 @model HairSalon.Models.Client
 
-<h1>You are in the Views/Clients/Delete.cshtml</h1>
+<h1>Delete Client</h1>
+<h3>Are you sure you want to DELETE this client?</h3>
 
-<h2>Are you sure you want to DELETE this?</h2>
+<div class="form-container card">
+  <h4 class="form-label" >@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h4>
+  <br>
+  @using (Html.BeginForm())
+  {
+      <input class="btn btn-info submit-button" type="submit" value="Delete Client" />
+  }
+</div>
 
-@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)
-@using (Html.BeginForm())
-{
-    <input type="submit" value="Delete Client" />
-}
-
-@Html.ActionLink("Back to Clients", "Index")
+<p>@Html.ActionLink("Back to Clients", "Index")</p>

@@ -3,13 +3,31 @@
 }
 @model HairSalon.Models.Client
 
-<h1>You are in Views/Clients/Details.cshtml</h1>
+<h1>Client Details</h1>
+<h3>Client @Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
 
-<h4>Client Details</h4>
-<hr/>
-
-<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+<table class="redTable">
+  <thead>
+    <tr>
+      <th>Client Id</th>
+      <th>Name</th>
+      <th>Stylist Id</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td colspan="3">
+      </td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>@Html.DisplayFor(model => model.ClientId)</td>
+      <td>@Html.DisplayFor(model => model.Name)</td>
+      <td>@Html.DisplayFor(model => model.StylistId)</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>@Html.ActionLink("Back to Clients", "Index")</p>
-<p>@Html.ActionLink("Edit Client", "Edit", new { id = Model.ClientId })</p>
 <p>@Html.ActionLink("Delete Client", "Delete", new { id = Model.ClientId })</p>

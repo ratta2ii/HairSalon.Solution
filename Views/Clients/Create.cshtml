@@ -3,23 +3,25 @@
 }
 @model HairSalon.Models.Client
 
+<h1>Add Client</h1>
 
-<h1>You are in Views/Clients/Create.cshtml</h1>?
+<div class="form-container">
+  @using (Html.BeginForm())
+  {
+    <h4 class="form-label">Enter Client Name</h4>
+   
+    <h4 class="form-input">@Html.TextBoxFor(model => model.Name)</h4>
 
-<h4>Add a new Client</h4>
+    <h4>Choose Stylist</h4>
+    <h4>@Html.DropDownList("StylistId")</h4>
+    <br/>
+    <input type="submit" value="Add Client" class="btn btn-info submit-button" />
+  }
+</div>
 
-@using (Html.BeginForm())
-{
-  @Html.LabelFor(model => model.Name)
-  @Html.TextBoxFor(model => model.Name)
+<p>@Html.ActionLink("Back to Clients", "Index")</p>
+<p>@Html.ActionLink("Back to Stylist", "Index", "Stylists")</p>
 
-  @Html.LabelFor(model => model.Stylist)
-  @Html.DropDownList("StylistId")
 
-  <input type="submit" value="Add Client" class="btn btn-default" />
-}
 
-<p>@Html.ActionLink("Show all Clients", "Index")</p>
-
-@* Update the correct links in this page. Perhaps a go back *@
 

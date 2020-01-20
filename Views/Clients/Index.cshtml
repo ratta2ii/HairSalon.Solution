@@ -1,26 +1,44 @@
 @{
   Layout = "_Layout";
 }
-
 @using HairSalon.Models;
 @model List<HairSalon.Models.Client>;
 
-<h4>I am the Views/Clients/Index.cshtml</h4>
-<h1>Clients</h1>1
+<h1>Clients</h1>
 
 @if (@Model.Count == 0)
 {
   <h3>There are currently no Clients</h3>
 }
-<ol>
-  @foreach (Client client in @Model)
-  {
-    <li>@Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId}) | @client.Stylist.Name</li>
-  }
-</ol>
+
+<table class="redTable">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Stylist</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td colspan="3">
+        <div class="links"><a href="#">&laquo;</a> <a class="active" href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">&raquo;</a></div>
+      </td>
+    </tr>
+  </tfoot>
+  <tbody>
+    @foreach (Client client in @Model)
+    {
+      <tr>
+        <td>300<span>@client.ClientId</span></td>
+        <td>@Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId})</td>
+        <td>@client.Stylist.Name</td>
+      </tr>
+    }
+  </tbody>
+</table> 
 
 <p>@Html.ActionLink("Add new Client", "Create")</p>
-<p>@Html.ActionLink("Add new Stylist", "Create", "Stylists")</p>
-<p>@Html.ActionLink("Back to Homepage", "Index", "Home")</p>
+<p>@Html.ActionLink("Back to Stylists", "Index", "Stylists")</p>
 
-@* Update the list elements and what they display *@
+
