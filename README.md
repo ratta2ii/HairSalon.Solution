@@ -2,7 +2,7 @@
 
 ###### By Trevor Mackin 01/17/2020  
 
-![ Screenshot of Project ] (https://github.com/ratta2ii/HairSalon.Solution/blob/master/img/HairSalon.gif)
+![ Screenshot of Project ](img/HairSalon.gif)
 
 ### **Description**
 
