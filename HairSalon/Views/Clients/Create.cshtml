@@ -9,9 +9,7 @@
   @using (Html.BeginForm())
   {
     <h4 class="form-label">Enter Client Name</h4>
-   
     <h4 class="form-input">@Html.TextBoxFor(model => model.Name)</h4>
-
     <h4>Choose Stylist</h4>
     <h4>@Html.DropDownList("StylistId")</h4>
     <br/>
