@@ -1,4 +1,4 @@
-# **Eau Claires's Salon**
+# **Hair Salon**
 
 ###### By Trevor Mackin 01/17/2020  
 
