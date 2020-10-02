@@ -3,11 +3,8 @@
 ###### By Trevor Mackin 01/17/2020  
 
 
-![ Screenshot of Project ](img/HairSalonScreenShot.png)
-
-
 ### **Description**
-_This is a server-side application built in C# using the ASP.Net Core Mvc framework. The project focuses on connecting to a database using the Entity Framework (Core). The application is meant to be for a Salon owner to keep track of their stylists, and the clients that belong to each stylist individually. When a user runs the application, they should be welcomed on a splash page and given a link to view all stylist. From here, the user should be able to navigate to a page showing all the stylists with CRUD functionality, allowing a user to Add, Edit and Delete a stylist. When the user clicks on a particular stylist they will be presented with a list of clients for that specific stylist. From the list of clients, a user can then click on a specific client to view further details of the client as well. The application also provides all CRUD functionality for each of the clients._
+_This is a server-side application built in C# using the ASP.NET Core Framework. The project focuses on connecting to a database using Entity Framework Core. The application is meant to be for a Salon owner to keep track of their stylists, and the clients that belong to each stylist individually. When a user runs the application, they should be welcomed on the landing page and given a link to view all stylist. From here, the user should be able to navigate to a page showing all the stylists with CRUD functionality, allowing a user to Add, Edit and Delete a stylist. When the user clicks on a particular stylist they will be presented with a list of clients for that specific stylist. From the list of clients, a user can then click on a specific client to view further details of the client as well. The application also provides all CRUD functionality for each of the clients._
 #
 
 ###  **Setup/Installation Requirements**
