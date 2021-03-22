@@ -2,8 +2,11 @@
 
 ###### By Trevor Mackin 01/17/2020  
 
-![Image of Paths](./img/HairSalon.gif)
-![Image of Paths](./img/HairSalonScreenShot.png)
+<center>
+    <img src="./img/HairSalon.gif" />
+    <img src="./img/HairSalonScreenShot.png" />     
+</center>
+
 
 
 ### **Description**
